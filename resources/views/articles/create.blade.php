@@ -3,7 +3,7 @@
 
 @section('content')
 
-  <h1>Post a card/collection for sale</h1>
+  <h1>Post a card for sale</h1>
 
 
     <hr/>
@@ -11,7 +11,7 @@
 
     {!! Form::open(['url' => 'articles', 'files' => true]) !!}
       <div class='form-group'>
-        {!! Form::label('title', 'The name of the card/collection:') !!}<br>
+        {!! Form::label('title', 'The name of the card you wish to sell[WTS] or buy[WTB]') !!}<br>
         {!! Form::text('title', null, ['class' => 'form-control']) !!}<br>
         {!! Form::label('body', 'Description/Quality:') !!}<br>
         {!! Form::textarea('body', null, ['class' => 'form-control']) !!}<br>

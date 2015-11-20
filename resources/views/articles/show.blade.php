@@ -8,8 +8,9 @@
 
       <article>
           {{ $article->body }}
-          <img src ="uploads/photokalli.file"/>
+
       </article>
+      <img src={{asset('uploads/photokalli')}} alt="Logo">
 
       <h3>by {{$article->username}}</h3>
 @endsection
