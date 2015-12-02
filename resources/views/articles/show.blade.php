@@ -10,7 +10,7 @@
           {{ $article->body }}
 
       </article>
-      <img src={{asset('uploads/photokalli')}} alt="Logo">
+      <img src={{asset('uploads/' . $article->id . $article->username)}} alt="Logo">
 
       <h3>by {{$article->username}}</h3>
 @endsection
