@@ -8,6 +8,9 @@
 
       <article>
           {{ $article->body }}
+
       </article>
+      <img src={{asset('uploads/' . $article->id . $article->username)}} alt="Logo">
+
       <h3>by {{$article->username}}</h3>
-@stop
+@endsection

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use Request;
 
+
 class ArticlesController extends Controller {
 
 	public function index()
@@ -42,7 +43,12 @@ class ArticlesController extends Controller {
 	public function store()
 	{
 		$input = Request::all();
-
+		$articles = Article::latest('published_at')->get()->first();
+		#dd($articles['attributes']['id']);
+		$ID = $articles['attributes']['id'];
+		$IDplus = $ID+1;
+		#dd($input);
+		$file = Request::file('photo')->move("uploads", "image" + $IDplus . \Auth::user()->username);
 
 		$input['published_at'] = Carbon::now();
 		$input['username'] = \Auth::user()->username;
